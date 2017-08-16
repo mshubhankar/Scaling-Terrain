@@ -6,4 +6,9 @@
 //  Copyright © 2017 Shubhankar Mohapatra. All rights reserved.
 //
 
-#include "main.hpp"
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout<<"Hello World";
+}

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B3610E91F446C8E003DACDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3610E81F446C8E003DACDF /* AppDelegate.m */; };
-		0B3610EC1F446C8E003DACDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3610EB1F446C8E003DACDF /* main.m */; };
-		0B3610EF1F446C8E003DACDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3610EE1F446C8E003DACDF /* ViewController.m */; };
-		0B3610F11F446C8E003DACDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B3610F01F446C8E003DACDF /* Assets.xcassets */; };
-		0B3610F41F446C8E003DACDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3610F21F446C8E003DACDF /* Main.storyboard */; };
-		0B3610FF1F446C8E003DACDF /* OpenGLTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3610FE1F446C8E003DACDF /* OpenGLTestTests.m */; };
 		0B36110A1F446C8E003DACDF /* OpenGLTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3611091F446C8E003DACDF /* OpenGLTestUITests.m */; };
+		0B3611191F446E30003DACDF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B3611171F446E30003DACDF /* main.cpp */; };
+		0B36111D1F44709B003DACDF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B36111C1F44709B003DACDF /* OpenGL.framework */; };
+		0B36111F1F4470BB003DACDF /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B36111E1F4470BB003DACDF /* libglfw.3.2.dylib */; };
+		0B3611211F4470C9003DACDF /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3611201F4470C9003DACDF /* libGLEW.2.0.0.dylib */; };
+		0B3611231F4471A7003DACDF /* libGLEW.2.0.0.dylib in Copy Files (2 items) */ = {isa = PBXBuildFile; fileRef = 0B3611201F4470C9003DACDF /* libGLEW.2.0.0.dylib */; };
+		0B3611241F4471AB003DACDF /* libglfw.3.2.dylib in Copy Files (2 items) */ = {isa = PBXBuildFile; fileRef = 0B36111E1F4470BB003DACDF /* libglfw.3.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,22 +33,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0B3611221F447183003DACDF /* Copy Files (2 items) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0B3611241F4471AB003DACDF /* libglfw.3.2.dylib in Copy Files (2 items) */,
+				0B3611231F4471A7003DACDF /* libGLEW.2.0.0.dylib in Copy Files (2 items) */,
+			);
+			name = "Copy Files (2 items)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0B3610E41F446C8D003DACDF /* OpenGLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B3610E71F446C8E003DACDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0B3610E81F446C8E003DACDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B3610EB1F446C8E003DACDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0B3610ED1F446C8E003DACDF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0B3610EE1F446C8E003DACDF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0B3610F01F446C8E003DACDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0B3610F31F446C8E003DACDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0B3610F51F446C8E003DACDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B3610FA1F446C8E003DACDF /* OpenGLTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenGLTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B3610FE1F446C8E003DACDF /* OpenGLTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLTestTests.m; sourceTree = "<group>"; };
-		0B3611001F446C8E003DACDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B3611051F446C8E003DACDF /* OpenGLTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenGLTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3611091F446C8E003DACDF /* OpenGLTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLTestUITests.m; sourceTree = "<group>"; };
 		0B36110B1F446C8E003DACDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B3611171F446E30003DACDF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
+		0B36111C1F44709B003DACDF /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		0B36111E1F4470BB003DACDF /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		0B3611201F4470C9003DACDF /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B3611211F4470C9003DACDF /* libGLEW.2.0.0.dylib in Frameworks */,
+				0B36111F1F4470BB003DACDF /* libglfw.3.2.dylib in Frameworks */,
+				0B36111D1F44709B003DACDF /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +91,11 @@
 		0B3610DB1F446C8D003DACDF = {
 			isa = PBXGroup;
 			children = (
+				0B36111A1F446F13003DACDF /* src */,
 				0B3610E61F446C8D003DACDF /* OpenGLTest */,
-				0B3610FD1F446C8E003DACDF /* OpenGLTestTests */,
 				0B3611081F446C8E003DACDF /* OpenGLTestUITests */,
 				0B3610E51F446C8D003DACDF /* Products */,
+				0B36111B1F44709B003DACDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +112,6 @@
 		0B3610E61F446C8D003DACDF /* OpenGLTest */ = {
 			isa = PBXGroup;
 			children = (
-				0B3610E71F446C8E003DACDF /* AppDelegate.h */,
-				0B3610E81F446C8E003DACDF /* AppDelegate.m */,
-				0B3610ED1F446C8E003DACDF /* ViewController.h */,
-				0B3610EE1F446C8E003DACDF /* ViewController.m */,
-				0B3610F01F446C8E003DACDF /* Assets.xcassets */,
-				0B3610F21F446C8E003DACDF /* Main.storyboard */,
-				0B3610F51F446C8E003DACDF /* Info.plist */,
 				0B3610EA1F446C8E003DACDF /* Supporting Files */,
 			);
 			path = OpenGLTest;
@@ -114,18 +120,8 @@
 		0B3610EA1F446C8E003DACDF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0B3610EB1F446C8E003DACDF /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0B3610FD1F446C8E003DACDF /* OpenGLTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				0B3610FE1F446C8E003DACDF /* OpenGLTestTests.m */,
-				0B3611001F446C8E003DACDF /* Info.plist */,
-			);
-			path = OpenGLTestTests;
 			sourceTree = "<group>";
 		};
 		0B3611081F446C8E003DACDF /* OpenGLTestUITests */ = {
@@ -135,6 +131,24 @@
 				0B36110B1F446C8E003DACDF /* Info.plist */,
 			);
 			path = OpenGLTestUITests;
+			sourceTree = "<group>";
+		};
+		0B36111A1F446F13003DACDF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0B3611171F446E30003DACDF /* main.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		0B36111B1F44709B003DACDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B3611201F4470C9003DACDF /* libGLEW.2.0.0.dylib */,
+				0B36111E1F4470BB003DACDF /* libglfw.3.2.dylib */,
+				0B36111C1F44709B003DACDF /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +161,7 @@
 				0B3610E01F446C8D003DACDF /* Sources */,
 				0B3610E11F446C8D003DACDF /* Frameworks */,
 				0B3610E21F446C8D003DACDF /* Resources */,
+				0B3611221F447183003DACDF /* Copy Files (2 items) */,
 			);
 			buildRules = (
 			);
@@ -243,8 +258,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B3610F11F446C8E003DACDF /* Assets.xcassets in Resources */,
-				0B3610F41F446C8E003DACDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B3610EF1F446C8E003DACDF /* ViewController.m in Sources */,
-				0B3610EC1F446C8E003DACDF /* main.m in Sources */,
-				0B3610E91F446C8E003DACDF /* AppDelegate.m in Sources */,
+				0B3611191F446E30003DACDF /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B3610FF1F446C8E003DACDF /* OpenGLTestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,17 +315,6 @@
 			targetProxy = 0B3611061F446C8E003DACDF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		0B3610F21F446C8E003DACDF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0B3610F31F446C8E003DACDF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0B36110C1F446C8E003DACDF /* Debug */ = {
@@ -410,8 +409,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = OpenGLTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/glew/2.0.0/lib,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = home.OpenGLTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -422,8 +427,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = OpenGLTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/glew/2.0.0/lib,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = home.OpenGLTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
