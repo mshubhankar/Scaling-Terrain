@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:OpenGLTest.xcodeproj">
+      location = "self:/Users/shubhankarmohapatra/Desktop/OpenGLTest/Scaling Terrain.xcodeproj">
    </FileRef>
 </Workspace>

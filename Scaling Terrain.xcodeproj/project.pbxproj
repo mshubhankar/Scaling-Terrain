@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2057C31F480A3000B71452 /* imageloader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B2057BE1F480A3000B71452 /* imageloader.cpp */; };
+		0B2057C41F480A3000B71452 /* heightmap.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 0B2057BF1F480A3000B71452 /* heightmap.bmp */; };
+		0B2057C51F480A3000B71452 /* vec3f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B2057C11F480A3000B71452 /* vec3f.cpp */; };
+		0B28C2E01F46AC7F00A3F6E0 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B28C2DF1F46AC7F00A3F6E0 /* GLUT.framework */; };
 		0B36110A1F446C8E003DACDF /* OpenGLTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3611091F446C8E003DACDF /* OpenGLTestUITests.m */; };
 		0B3611191F446E30003DACDF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B3611171F446E30003DACDF /* main.cpp */; };
 		0B36111D1F44709B003DACDF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B36111C1F44709B003DACDF /* OpenGL.framework */; };
 		0B36111F1F4470BB003DACDF /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B36111E1F4470BB003DACDF /* libglfw.3.2.dylib */; };
 		0B3611211F4470C9003DACDF /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3611201F4470C9003DACDF /* libGLEW.2.0.0.dylib */; };
-		0B3611231F4471A7003DACDF /* libGLEW.2.0.0.dylib in Copy Files (2 items) */ = {isa = PBXBuildFile; fileRef = 0B3611201F4470C9003DACDF /* libGLEW.2.0.0.dylib */; };
-		0B3611241F4471AB003DACDF /* libglfw.3.2.dylib in Copy Files (2 items) */ = {isa = PBXBuildFile; fileRef = 0B36111E1F4470BB003DACDF /* libglfw.3.2.dylib */; };
+		0B3611231F4471A7003DACDF /* libGLEW.2.0.0.dylib in Copy Files (2 items) */ = {isa = PBXBuildFile; fileRef = 0B3611201F4470C9003DACDF /* libGLEW.2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0B3611241F4471AB003DACDF /* libglfw.3.2.dylib in Copy Files (2 items) */ = {isa = PBXBuildFile; fileRef = 0B36111E1F4470BB003DACDF /* libglfw.3.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0BFA3D361F4C948A0025E5DB /* search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BFA3D341F4C948A0025E5DB /* search.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B2057BE1F480A3000B71452 /* imageloader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imageloader.cpp; path = src/imageloader.cpp; sourceTree = "<group>"; };
+		0B2057BF1F480A3000B71452 /* heightmap.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = heightmap.bmp; path = src/heightmap.bmp; sourceTree = "<group>"; };
+		0B2057C01F480A3000B71452 /* imageloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imageloader.h; path = src/imageloader.h; sourceTree = "<group>"; };
+		0B2057C11F480A3000B71452 /* vec3f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vec3f.cpp; path = src/vec3f.cpp; sourceTree = "<group>"; };
+		0B2057C21F480A3000B71452 /* vec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vec3f.h; path = src/vec3f.h; sourceTree = "<group>"; };
+		0B28C2DF1F46AC7F00A3F6E0 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		0B3610E41F446C8D003DACDF /* OpenGLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3610FA1F446C8E003DACDF /* OpenGLTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenGLTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3611051F446C8E003DACDF /* OpenGLTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenGLTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +69,8 @@
 		0B36111C1F44709B003DACDF /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		0B36111E1F4470BB003DACDF /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		0B3611201F4470C9003DACDF /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
+		0BFA3D341F4C948A0025E5DB /* search.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = search.cpp; path = src/search.cpp; sourceTree = "<group>"; };
+		0BFA3D351F4C948A0025E5DB /* search.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = search.hpp; path = src/search.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B28C2E01F46AC7F00A3F6E0 /* GLUT.framework in Frameworks */,
 				0B3611211F4470C9003DACDF /* libGLEW.2.0.0.dylib in Frameworks */,
 				0B36111F1F4470BB003DACDF /* libglfw.3.2.dylib in Frameworks */,
 				0B36111D1F44709B003DACDF /* OpenGL.framework in Frameworks */,
@@ -136,7 +150,14 @@
 		0B36111A1F446F13003DACDF /* src */ = {
 			isa = PBXGroup;
 			children = (
+				0B2057BE1F480A3000B71452 /* imageloader.cpp */,
+				0B2057BF1F480A3000B71452 /* heightmap.bmp */,
+				0B2057C01F480A3000B71452 /* imageloader.h */,
+				0B2057C11F480A3000B71452 /* vec3f.cpp */,
+				0B2057C21F480A3000B71452 /* vec3f.h */,
 				0B3611171F446E30003DACDF /* main.cpp */,
+				0BFA3D341F4C948A0025E5DB /* search.cpp */,
+				0BFA3D351F4C948A0025E5DB /* search.hpp */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -144,6 +165,7 @@
 		0B36111B1F44709B003DACDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B28C2DF1F46AC7F00A3F6E0 /* GLUT.framework */,
 				0B3611201F4470C9003DACDF /* libGLEW.2.0.0.dylib */,
 				0B36111E1F4470BB003DACDF /* libglfw.3.2.dylib */,
 				0B36111C1F44709B003DACDF /* OpenGL.framework */,
@@ -233,7 +255,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0B3610DF1F446C8D003DACDF /* Build configuration list for PBXProject "OpenGLTest" */;
+			buildConfigurationList = 0B3610DF1F446C8D003DACDF /* Build configuration list for PBXProject "Scaling Terrain" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -258,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2057C41F480A3000B71452 /* heightmap.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +305,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2057C31F480A3000B71452 /* imageloader.cpp in Sources */,
+				0BFA3D361F4C948A0025E5DB /* search.cpp in Sources */,
+				0B2057C51F480A3000B71452 /* vec3f.cpp in Sources */,
 				0B3611191F446E30003DACDF /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +435,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw,
+					/usr/local/Cellar,
+				);
 				INFOPLIST_FILE = OpenGLTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -427,7 +457,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw,
+					/usr/local/Cellar,
+				);
 				INFOPLIST_FILE = OpenGLTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -493,7 +527,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B3610DF1F446C8D003DACDF /* Build configuration list for PBXProject "OpenGLTest" */ = {
+		0B3610DF1F446C8D003DACDF /* Build configuration list for PBXProject "Scaling Terrain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B36110C1F446C8E003DACDF /* Debug */,
@@ -509,6 +543,7 @@
 				0B3611101F446C8E003DACDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B3611111F446C8E003DACDF /* Build configuration list for PBXNativeTarget "OpenGLTestTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +552,7 @@
 				0B3611131F446C8E003DACDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B3611141F446C8E003DACDF /* Build configuration list for PBXNativeTarget "OpenGLTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +561,7 @@
 				0B3611161F446C8E003DACDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
