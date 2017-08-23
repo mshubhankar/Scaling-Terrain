@@ -31,16 +31,16 @@ public:
         double f, g, h;
     };
     int ROW,COL;
-    int ** grid;
+    float ** grid;
     int **path;
     cell ** cellDetails;
-    asearch(int,int,int **);
+    asearch(int,int,float **);
     
     
-    void aStarSearch(int ** grid, Pair src, Pair dest);
+    void aStarSearch(float ** grid, Pair src, Pair dest);
     void start();
     bool isValid(int row, int col);
-    bool isUnBlocked(int **grid, int row, int col);
+    bool isUnBlocked(float **grid, int row, int col,int prow,int pcol);
     bool isDestination(int row, int col, Pair dest);
     double calculateHValue(int row, int col, Pair dest);
     void tracePath(cell** cellDetails, Pair dest);

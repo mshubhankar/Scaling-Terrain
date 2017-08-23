@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1302051F4D8F6400A3BF76 /* heightmap3.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 0B1302041F4D8F6400A3BF76 /* heightmap3.bmp */; };
 		0B2057C31F480A3000B71452 /* imageloader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B2057BE1F480A3000B71452 /* imageloader.cpp */; };
 		0B2057C41F480A3000B71452 /* heightmap.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 0B2057BF1F480A3000B71452 /* heightmap.bmp */; };
 		0B2057C51F480A3000B71452 /* vec3f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B2057C11F480A3000B71452 /* vec3f.cpp */; };
 		0B28C2E01F46AC7F00A3F6E0 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B28C2DF1F46AC7F00A3F6E0 /* GLUT.framework */; };
-		0B36110A1F446C8E003DACDF /* OpenGLTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3611091F446C8E003DACDF /* OpenGLTestUITests.m */; };
 		0B3611191F446E30003DACDF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B3611171F446E30003DACDF /* main.cpp */; };
 		0B36111D1F44709B003DACDF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B36111C1F44709B003DACDF /* OpenGL.framework */; };
 		0B36111F1F4470BB003DACDF /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B36111E1F4470BB003DACDF /* libglfw.3.2.dylib */; };
@@ -54,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B1302041F4D8F6400A3BF76 /* heightmap3.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = heightmap3.bmp; path = src/heightmap3.bmp; sourceTree = "<group>"; };
 		0B2057BE1F480A3000B71452 /* imageloader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imageloader.cpp; path = src/imageloader.cpp; sourceTree = "<group>"; };
 		0B2057BF1F480A3000B71452 /* heightmap.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = heightmap.bmp; path = src/heightmap.bmp; sourceTree = "<group>"; };
 		0B2057C01F480A3000B71452 /* imageloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imageloader.h; path = src/imageloader.h; sourceTree = "<group>"; };
@@ -63,8 +64,6 @@
 		0B3610E41F446C8D003DACDF /* OpenGLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3610FA1F446C8E003DACDF /* OpenGLTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenGLTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3611051F446C8E003DACDF /* OpenGLTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenGLTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B3611091F446C8E003DACDF /* OpenGLTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLTestUITests.m; sourceTree = "<group>"; };
-		0B36110B1F446C8E003DACDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B3611171F446E30003DACDF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
 		0B36111C1F44709B003DACDF /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		0B36111E1F4470BB003DACDF /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
@@ -106,8 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				0B36111A1F446F13003DACDF /* src */,
-				0B3610E61F446C8D003DACDF /* OpenGLTest */,
-				0B3611081F446C8E003DACDF /* OpenGLTestUITests */,
 				0B3610E51F446C8D003DACDF /* Products */,
 				0B36111B1F44709B003DACDF /* Frameworks */,
 			);
@@ -123,33 +120,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0B3610E61F446C8D003DACDF /* OpenGLTest */ = {
-			isa = PBXGroup;
-			children = (
-				0B3610EA1F446C8E003DACDF /* Supporting Files */,
-			);
-			path = OpenGLTest;
-			sourceTree = "<group>";
-		};
-		0B3610EA1F446C8E003DACDF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0B3611081F446C8E003DACDF /* OpenGLTestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0B3611091F446C8E003DACDF /* OpenGLTestUITests.m */,
-				0B36110B1F446C8E003DACDF /* Info.plist */,
-			);
-			path = OpenGLTestUITests;
-			sourceTree = "<group>";
-		};
 		0B36111A1F446F13003DACDF /* src */ = {
 			isa = PBXGroup;
 			children = (
+				0B1302041F4D8F6400A3BF76 /* heightmap3.bmp */,
 				0B2057BE1F480A3000B71452 /* imageloader.cpp */,
 				0B2057BF1F480A3000B71452 /* heightmap.bmp */,
 				0B2057C01F480A3000B71452 /* imageloader.h */,
@@ -281,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B2057C41F480A3000B71452 /* heightmap.bmp in Resources */,
+				0B1302051F4D8F6400A3BF76 /* heightmap3.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B36110A1F446C8E003DACDF /* OpenGLTestUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

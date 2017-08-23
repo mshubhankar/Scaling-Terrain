@@ -200,23 +200,23 @@ void handleKeypress(unsigned char key, int x, int y) {
 		case 27: //Escape key
 			cleanup();
 			exit(0);
-        case 97:
+        case 97: //Left Rotate
             _angle -= 2.0f;
             if (_angle > 360) {
                 _angle -= 360;
             }
             break;
-        case 100:
+        case 100: //Right Rotate
             _angle += 2.0f;
             if (_angle < 0) {
                 _angle += 360;
             }
             break;
-        case 119:
+        case 119: // Zoom In
             zoom=true;
            scale=scale*1.25;
             break;
-        case 115:
+        case 115: //Zoom Out
             zoom=true;
             scale=scale/1.25;
             break;
@@ -274,9 +274,9 @@ void drawScene() {
     int w=_terrain->width();
     
     int i,j;
-    int **gridnew;
-    gridnew  = (int **)malloc(sizeof(int *) * l);
-    gridnew[0] = (int *)malloc(sizeof(int) * w * l);
+    float **gridnew;
+    gridnew  = (float **)malloc(sizeof(float *) * l);
+    gridnew[0] = (float *)malloc(sizeof(float) * w * l);
     for(i = 0; i < l; i++)
         gridnew[i] = (*gridnew + w * i);
     
@@ -284,13 +284,9 @@ void drawScene() {
     {
         for(j=0;j<w;j++)
         {
-//            if(j==1 && i==2)
-//                gridnew[i][j]=0;
-//            else
-                gridnew[i][j]=1;
-
+                gridnew[i][j]= _terrain->getHeight(i, j);
+            
         }
-        cout<<endl;
     }
     
     
@@ -318,12 +314,13 @@ void drawScene() {
 			normal = _terrain->getNormal(x, z + 1);
 			glNormal3f(normal[0], normal[1], normal[2]);
 			glVertex3f(x, _terrain->getHeight(x, z + 1), z + 1);
-            if(path[x][z]==1)
+            if(path[x][z]==1)//If triangle strip contains path then draw straight line.
             {
                 glColor3f(0.9, 0.3, 0);
                 glBegin(GL_LINES);
                 glVertex3f(x, _terrain->getHeight(x, z), z);
                 glVertex3f(x, _terrain->getHeight(x, z + 1), z + 1);
+                
                 glColor3f(0.3f, 0.9f, 0.0f);
             }
             
@@ -352,7 +349,7 @@ int main(int argc, char** argv) {
 	glutCreateWindow("3D Model");
 	initRendering();
 	
-	_terrain = loadTerrain("heightmap.bmp", 20);
+	_terrain = loadTerrain("heightmap3.bmp", 20);
 	
 	glutDisplayFunc(drawScene);
 	glutKeyboardFunc(handleKeypress);

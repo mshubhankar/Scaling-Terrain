@@ -19,14 +19,14 @@ using namespace std;
 
 
 
-asearch::asearch(int a,int b,int **arr)
+asearch::asearch(int a,int b,float **arr)
 {
     int i,j;
     ROW=a;
     COL=b;
     //Allocating size for all array
-    grid  = (int **)malloc(sizeof(int *) * a);
-    grid[0] = (int *)malloc(sizeof(int) * b * a);
+    grid  = (float **)malloc(sizeof(float *) * a);
+    grid[0] = (float *)malloc(sizeof(float) * b * a);
     for(i = 0; i < a; i++)
         grid[i] = (*grid + b * i);
     
@@ -68,10 +68,10 @@ bool asearch::isValid(int row, int col)
 
 // A Utility Function to check whether the given cell is
 // blocked or not
-bool asearch::isUnBlocked(int **grid, int row, int col)
+bool asearch::isUnBlocked(float **grid, int row, int col,int prow, int pcol)
 {
     // Returns true if the cell is not blocked else false
-    if (grid[row][col] == 1)
+    if (abs(grid[prow][pcol]-grid[row][col])<=0.5)
         return (true);
     else
         return (false);
@@ -130,7 +130,7 @@ void asearch::tracePath(asearch::cell** cellDetails, Pair dest)
 // A Function to find the shortest path between
 // a given source cell to a destination cell according
 // to A* Search Algorithm
-void asearch::aStarSearch(int ** grid, Pair src, Pair dest)
+void asearch::aStarSearch(float ** grid, Pair src, Pair dest)
 {
     // If the source is out of range
     if (isValid (src.first, src.second) == false)
@@ -147,12 +147,12 @@ void asearch::aStarSearch(int ** grid, Pair src, Pair dest)
     }
     
     // Either the source or the destination is blocked
-    if (isUnBlocked(grid, src.first, src.second) == false ||
-        isUnBlocked(grid, dest.first, dest.second) == false)
-    {
-        printf ("Source or the destination is blocked\n");
-        return;
-    }
+//    if (isUnBlocked(grid, src.first, src.second) == false ||
+//        isUnBlocked(grid, dest.first, dest.second) == false)
+//    {
+//        printf ("Source or the destination is blocked\n");
+//        return;
+//    }
     
     // If the destination cell is the same as source cell
     if (isDestination(src.first, src.second, dest) == true)
@@ -266,7 +266,7 @@ void asearch::aStarSearch(int ** grid, Pair src, Pair dest)
             // list or if it is blocked, then ignore it.
             // Else do the following
             else if (closedList[i-1][j] == false &&
-                     isUnBlocked(grid, i-1, j) == true)
+                     isUnBlocked(grid, i-1, j,i,j) == true)
             {
                 gNew = cellDetails[i][j].g + 1.0;
                 hNew = calculateHValue (i-1, j, dest);
@@ -317,7 +317,7 @@ void asearch::aStarSearch(int ** grid, Pair src, Pair dest)
             // list or if it is blocked, then ignore it.
             // Else do the following
             else if (closedList[i+1][j] == false &&
-                     isUnBlocked(grid, i+1, j) == true)
+                     isUnBlocked(grid, i+1, j,i,j) == true)
             {
                 gNew = cellDetails[i][j].g + 1.0;
                 hNew = calculateHValue(i+1, j, dest);
@@ -367,7 +367,7 @@ void asearch::aStarSearch(int ** grid, Pair src, Pair dest)
             // list or if it is blocked, then ignore it.
             // Else do the following
             else if (closedList[i][j+1] == false &&
-                     isUnBlocked (grid, i, j+1) == true)
+                     isUnBlocked (grid, i, j+1,i,j) == true)
             {
                 gNew = cellDetails[i][j].g + 1.0;
                 hNew = calculateHValue (i, j+1, dest);
@@ -419,7 +419,7 @@ void asearch::aStarSearch(int ** grid, Pair src, Pair dest)
             // list or if it is blocked, then ignore it.
             // Else do the following
             else if (closedList[i][j-1] == false &&
-                     isUnBlocked(grid, i, j-1) == true)
+                     isUnBlocked(grid, i, j-1,i,j) == true)
             {
                 gNew = cellDetails[i][j].g + 1.0;
                 hNew = calculateHValue(i, j-1, dest);
@@ -471,7 +471,7 @@ void asearch::aStarSearch(int ** grid, Pair src, Pair dest)
             // list or if it is blocked, then ignore it.
             // Else do the following
             else if (closedList[i-1][j+1] == false &&
-                     isUnBlocked(grid, i-1, j+1) == true)
+                     isUnBlocked(grid, i-1, j+1,i,j) == true)
             {
                 gNew = cellDetails[i][j].g + 1.414;
                 hNew = calculateHValue(i-1, j+1, dest);
@@ -523,7 +523,7 @@ void asearch::aStarSearch(int ** grid, Pair src, Pair dest)
             // list or if it is blocked, then ignore it.
             // Else do the following
             else if (closedList[i-1][j-1] == false &&
-                     isUnBlocked(grid, i-1, j-1) == true)
+                     isUnBlocked(grid, i-1, j-1,i,j) == true)
             {
                 gNew = cellDetails[i][j].g + 1.414;
                 hNew = calculateHValue(i-1, j-1, dest);
@@ -573,7 +573,7 @@ void asearch::aStarSearch(int ** grid, Pair src, Pair dest)
             // list or if it is blocked, then ignore it.
             // Else do the following
             else if (closedList[i+1][j+1] == false &&
-                     isUnBlocked(grid, i+1, j+1) == true)
+                     isUnBlocked(grid, i+1, j+1,i,j) == true)
             {
                 gNew = cellDetails[i][j].g + 1.414;
                 hNew = calculateHValue(i+1, j+1, dest);
@@ -625,7 +625,7 @@ void asearch::aStarSearch(int ** grid, Pair src, Pair dest)
             // list or if it is blocked, then ignore it.
             // Else do the following
             else if (closedList[i+1][j-1] == false &&
-                     isUnBlocked(grid, i+1, j-1) == true)
+                     isUnBlocked(grid, i+1, j-1,i,j) == true)
             {
                 gNew = cellDetails[i][j].g + 1.414;
                 hNew = calculateHValue(i+1, j-1, dest);
@@ -670,28 +670,12 @@ void asearch::aStarSearch(int ** grid, Pair src, Pair dest)
 // Driver program to test above function
 void asearch::start()
 {
-    /* Description of the Grid-
-     1--> The cell is not blocked
-     0--> The cell is blocked */
-//    int grid[ROW][COL] =
-//    {
-//        { 1, 0, 1, 1, 1, 1, 0, 1, 1, 1 },
-//        { 1, 1, 1, 0, 1, 1, 1, 0, 1, 1 },
-//        { 1, 1, 1, 0, 1, 1, 0, 1, 0, 1 },
-//        { 0, 0, 1, 0, 1, 0, 0, 0, 0, 1 },
-//        { 1, 1, 1, 0, 1, 1, 1, 0, 1, 0 },
-//        { 1, 0, 1, 1, 1, 1, 0, 1, 0, 0 },
-//        { 1, 0, 0, 0, 0, 1, 0, 0, 0, 1 },
-//        { 1, 0, 1, 1, 1, 1, 0, 1, 1, 1 },
-//        { 1, 1, 1, 0, 0, 0, 1, 0, 0, 1 }
-//    };
-//
-    
+     
     // Source is the left-most bottom-most corner
-    Pair src = make_pair(1, 35);
+    Pair src = make_pair(10, 15);
     
     // Destination is the left-most top-most corner
-    Pair dest = make_pair(23, 45);
+    Pair dest = make_pair(35, 25);
         asearch::aStarSearch(grid, src, dest);
     
 }
