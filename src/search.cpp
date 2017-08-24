@@ -13,7 +13,7 @@
 #include <cfloat>
 #include <cmath>
 #include <stack>
-
+#include <vector>
 using namespace std;
 
 
@@ -30,11 +30,6 @@ asearch::asearch(int a,int b,float **arr)
     for(i = 0; i < a; i++)
         grid[i] = (*grid + b * i);
     
-    path  = (int **)malloc(sizeof(int *) * a);
-    path[0] = (int *)malloc(sizeof(int) * b * a);
-    for(i = 0; i < a; i++)
-        path[i] = (*path + b * i);
-    
     
     cellDetails  = (cell **)malloc(sizeof(cell *) * a);
     cellDetails[0] = (cell *)malloc(sizeof(cell) * b * a);
@@ -46,7 +41,6 @@ asearch::asearch(int a,int b,float **arr)
         for(j=0;j<b;j++)
         {
             grid[i][j]=arr[i][j];
-            path[i][j]=0;
         }
     }
 }
@@ -71,7 +65,7 @@ bool asearch::isValid(int row, int col)
 bool asearch::isUnBlocked(float **grid, int row, int col,int prow, int pcol)
 {
     // Returns true if the cell is not blocked else false
-    if (abs(grid[prow][pcol]-grid[row][col])<=0.5)
+    if (abs(grid[prow][pcol]-grid[row][col])<=0.85)
         return (true);
     else
         return (false);
@@ -121,7 +115,8 @@ void asearch::tracePath(asearch::cell** cellDetails, Pair dest)
         pair<int,int> p = Path.top();
         Path.pop();
 //        printf("-> (%d,%d) ",p.first,p.second);
-       path[p.first][p.second]=1;
+//       path[p.first][p.second]=1;
+        path.push_back(p);
     }
     
     return;
@@ -675,7 +670,7 @@ void asearch::start()
     Pair src = make_pair(10, 15);
     
     // Destination is the left-most top-most corner
-    Pair dest = make_pair(35, 25);
+    Pair dest = make_pair(55, 45);
         asearch::aStarSearch(grid, src, dest);
     
 }

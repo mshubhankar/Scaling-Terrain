@@ -13,6 +13,7 @@
 #include "imageloader.h"
 #include "vec3f.h"
 #include "search.hpp"
+typedef pair<int, int> Pair;
 using namespace std;
 
 //Represents a terrain, by storing a set of heights and normals at 2D locations
@@ -123,7 +124,7 @@ class Terrain {
 			}
 			
 			//Smooth out the normals
-			const float FALLOUT_RATIO = 0.5f;
+			const float FALLOUT_RATIO = 0.7f;
 			for(int z = 0; z < l; z++) {
 				for(int x = 0; x < w; x++) {
 					Vec3f sum = normals2[z][x];
@@ -293,7 +294,9 @@ void drawScene() {
     asearch* s=new asearch(l,w,gridnew);
     s->start();
     
-    int** path=s->path;
+   // int** path=s->path;
+    vector<Pair> path=s->path;
+    
     
 //    for(i=0;i<l;i++)
 //    {
@@ -314,20 +317,38 @@ void drawScene() {
 			normal = _terrain->getNormal(x, z + 1);
 			glNormal3f(normal[0], normal[1], normal[2]);
 			glVertex3f(x, _terrain->getHeight(x, z + 1), z + 1);
-            if(path[x][z]==1)//If triangle strip contains path then draw straight line.
-            {
-                glColor3f(0.9, 0.3, 0);
-                glBegin(GL_LINES);
-                glVertex3f(x, _terrain->getHeight(x, z), z);
-                glVertex3f(x, _terrain->getHeight(x, z + 1), z + 1);
-                
-                glColor3f(0.3f, 0.9f, 0.0f);
-            }
             
 		}
 		glEnd();
 	}
-	
+    
+    Pair f=path.back();
+    path.pop_back();
+    while(!path.empty())
+    {
+        Pair curr=path.back();
+        glColor3f(0, 0, 0);
+        glLineWidth(4);
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        glEnable(GL_LINE_SMOOTH);
+        glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+        glBegin(GL_LINE_STRIP);
+        
+        int x=f.first;
+        int z=f.second;
+        int x1=curr.first;
+        int z1=curr.second;
+        glVertex3f(x, _terrain->getHeight(x, z), z);
+        glVertex3f(x1, _terrain->getHeight(x1, z1), z1);
+
+        
+        
+        f=curr;
+        path.pop_back();
+        
+    }
+    glEnd();
 	glutSwapBuffers();
 }
 
@@ -349,7 +370,7 @@ int main(int argc, char** argv) {
 	glutCreateWindow("3D Model");
 	initRendering();
 	
-	_terrain = loadTerrain("heightmap3.bmp", 20);
+	_terrain = loadTerrain("heightmap.bmp", 20);
 	
 	glutDisplayFunc(drawScene);
 	glutKeyboardFunc(handleKeypress);

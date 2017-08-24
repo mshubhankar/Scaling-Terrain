@@ -15,6 +15,7 @@
 #include <cfloat>
 #include <cmath>
 #include <stack>
+#include <vector>
 #endif /* search_hpp */
 using namespace std;
 typedef pair<int, int> Pair;
@@ -32,7 +33,7 @@ public:
     };
     int ROW,COL;
     float ** grid;
-    int **path;
+    vector<Pair> path;
     cell ** cellDetails;
     asearch(int,int,float **);
     
