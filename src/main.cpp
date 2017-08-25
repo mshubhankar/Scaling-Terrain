@@ -196,6 +196,11 @@ void cleanup() {
 	delete _terrain;
 }
 
+void handleMouse(int button, int state,int x, int y ){
+    cout<<x<<" "<<y<<endl;
+}
+
+
 void handleKeypress(unsigned char key, int x, int y) {
 	switch (key) {
 		case 27: //Escape key
@@ -321,13 +326,18 @@ void drawScene() {
 		}
 		glEnd();
 	}
-    
+    bool start=true;
     Pair f=path.back();
     path.pop_back();
     while(!path.empty())
     {
         Pair curr=path.back();
         glColor3f(0, 0, 0);
+        if(start || path.size()==1)
+        {
+            glColor3f(0.9, 0.3, 0);
+            start=false;
+        }
         glLineWidth(4);
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -374,6 +384,7 @@ int main(int argc, char** argv) {
 	
 	glutDisplayFunc(drawScene);
 	glutKeyboardFunc(handleKeypress);
+    glutMouseFunc(handleMouse);
 	glutReshapeFunc(handleResize);
 	glutTimerFunc(25, update, 0);
 	

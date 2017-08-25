@@ -670,7 +670,7 @@ void asearch::start()
     Pair src = make_pair(10, 15);
     
     // Destination is the left-most top-most corner
-    Pair dest = make_pair(55, 45);
+    Pair dest = make_pair(25, 45);
         asearch::aStarSearch(grid, src, dest);
     
 }
